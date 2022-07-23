@@ -32,7 +32,7 @@ namespace DialogRadioModifier
         private void buttonOpenFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog d = new OpenFileDialog();
-            d.Filter = "Sound Files|*.wav;*.ogg;*.mp3";
+            d.Filter = "Sound Files|*.wav;*.mp3";
             if (d.ShowDialog() == DialogResult.OK)
             {
                 // set up config for renderer
@@ -66,7 +66,8 @@ namespace DialogRadioModifier
                 EndTimePercent = 1;
                 trackBarStart.Value = 0;
                 trackBarEnd.Value = TRACKBAR_RESOLUTION;
-                comboBoxQuality.SelectedIndex = 0;
+                if(comboBoxQuality.SelectedIndex < 0)
+                    comboBoxQuality.SelectedIndex = 0;
 
                 // enable everything for editing
                 waveformVisualizer1.Refresh();
@@ -175,11 +176,11 @@ namespace DialogRadioModifier
                     {
                         if(val > 0)
                         {
-                            val = (val / maxVal) * 0.6f;
+                            val = (val / maxVal) * 1.0f;
                         }
                         else if(val < 0)
                         {
-                            val = (val / minVal) * -0.6f;
+                            val = (val / minVal) * -1.0f;
                         }
                     }
                     // this will reduce the sample resolution

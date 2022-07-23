@@ -180,7 +180,7 @@
             this.buttonExport.UseVisualStyleBackColor = true;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,8 +189,8 @@
             this.Controls.Add(this.groupBoxOptions);
             this.Controls.Add(this.waveformVisualizer1);
             this.Controls.Add(this.buttonOpenFile);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "Audio Radio Modulator";
             ((System.ComponentModel.ISupportInitialize)(this.trackBarStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarEnd)).EndInit();
             this.groupBoxOptions.ResumeLayout(false);
